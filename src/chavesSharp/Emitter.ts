@@ -37,7 +37,7 @@ export function emitter(program: Program): string {
   }
 
   function emitCallExpression(node: CallExpressionNode) {
-    if (node.identifier.value === "e_que_me_escapuliu") {
+    if (node.identifier.value === "equemeescapuliu") {
       return `console.log(${emit(node.argument)})`;
     } else {
       throw new SyntaxError(
