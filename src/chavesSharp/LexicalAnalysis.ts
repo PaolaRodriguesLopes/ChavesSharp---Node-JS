@@ -34,12 +34,12 @@ export function lexicalAnalysis(input: string): Token[] {
     // Validate numbers
     const numbers = /[0-9]/;
     if (numbers.test(char)) {
-      let numberValue = "";
+      let value = "";
       while (numbers.test(char)) {
-        numberValue += char;
+        value += char;
         char = input[++cursorPos]!;
       }
-      tokens.push({ type: "NumericToken", numberValue });
+      tokens.push({ type: "NumericToken", value });
       continue;
     }
 
